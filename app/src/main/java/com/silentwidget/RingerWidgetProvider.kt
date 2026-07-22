@@ -27,7 +27,7 @@ class RingerWidgetProvider : AppWidgetProvider() {
 
     override fun onDisabled(context: Context) {
         super.onDisabled(context)
-        // Last widget removed — drop the sync service (and its notification).
+        // Last widget removed - drop the sync service (and its notification).
         RingerSyncService.stop(context)
     }
 
@@ -52,7 +52,7 @@ class RingerWidgetProvider : AppWidgetProvider() {
 
         /**
          * The "effective" mode for display. On Pixel, ringer-mode SILENT doesn't
-         * stick — silence is achieved via DND. So if DND is anything stricter
+         * stick - silence is achieved via DND. So if DND is anything stricter
          * than ALL, show Silent regardless of the underlying ringer mode.
          */
         private fun currentDisplayMode(context: Context): Int {

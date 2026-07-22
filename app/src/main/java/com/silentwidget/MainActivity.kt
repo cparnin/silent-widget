@@ -65,7 +65,7 @@ private fun HomeScreen() {
     var dndGranted by remember { mutableStateOf(isDndAccessGranted(context)) }
     var notifGranted by remember { mutableStateOf(isNotificationPermissionGranted(context)) }
 
-    // Re-check permissions whenever the screen resumes — i.e. exactly when the
+    // Re-check permissions whenever the screen resumes - i.e. exactly when the
     // user comes back from the Settings pages the buttons below open.
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner) {
@@ -89,7 +89,7 @@ private fun HomeScreen() {
     ) {
         Text("Silent Widget", style = MaterialTheme.typography.headlineMedium)
         Text(
-            "Vertical three-position widget — tap Ring, Vibrate, or Silent. " +
+            "Vertical three-position widget - tap Ring, Vibrate, or Silent. " +
             "Long-press your home screen → Widgets → Silent Widget to add it.",
             style = MaterialTheme.typography.bodyMedium
         )
@@ -166,7 +166,7 @@ private fun openDndAccessSettings(context: Context) {
 
 private fun ComponentActivity.maybeStartSyncService() {
     // Foreground services can only be started from a foreground context on Android 12+.
-    // MainActivity is foreground, so this is safe — kicks off real-time volume-button sync.
+    // MainActivity is foreground, so this is safe - kicks off real-time volume-button sync.
     val widgetCount = AppWidgetManager.getInstance(this).getAppWidgetIds(
         ComponentName(this, RingerWidgetProvider::class.java)
     ).size

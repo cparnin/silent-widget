@@ -10,7 +10,7 @@ import android.os.Looper
 import android.provider.Settings
 
 /**
- * Handles widget button taps. Deliberately NOT exported — the widget's own
+ * Handles widget button taps. Deliberately NOT exported - the widget's own
  * PendingIntents can always reach it, but other apps cannot forge a broadcast
  * to silence the phone or toggle DND. (The widget provider itself must stay
  * exported for the launcher, so click handling lives here instead.)
@@ -27,7 +27,7 @@ class SetModeReceiver : BroadcastReceiver() {
         try {
             when (mode) {
                 AudioManager.RINGER_MODE_SILENT -> {
-                    // Pixel ignores ringer-mode SILENT — use DND (alarms-only). This
+                    // Pixel ignores ringer-mode SILENT - use DND (alarms-only). This
                     // also drives mode_ringer to 0, so the volume rocker stays in sync.
                     nm.setInterruptionFilter(NotificationManager.INTERRUPTION_FILTER_ALARMS)
                 }
@@ -46,7 +46,7 @@ class SetModeReceiver : BroadcastReceiver() {
                 }
             }
         } catch (e: SecurityException) {
-            // DND access not granted — send the user to the right Settings page.
+            // DND access not granted - send the user to the right Settings page.
             context.startActivity(
                 Intent(Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS)
                     .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)

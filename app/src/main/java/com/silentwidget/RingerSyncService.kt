@@ -59,7 +59,7 @@ class RingerSyncService : Service() {
             NotificationManager.IMPORTANCE_MIN
         ).apply {
             description = "Required to keep the widget in sync with hardware volume buttons. " +
-                "This notification cannot be dismissed — Android requires foreground services to show one."
+                "This notification cannot be dismissed - Android requires foreground services to show one."
             setShowBadge(false)
             enableLights(false)
             enableVibration(false)
