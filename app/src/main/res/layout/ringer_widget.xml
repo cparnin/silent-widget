@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/widget_background"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <ImageView
+        android:id="@+id/btn_ring"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:contentDescription="Ring"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_volume_up"
+        android:tint="#F5FFFFFF" />
+
+    <ImageView
+        android:id="@+id/btn_vibrate"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="2dp"
+        android:contentDescription="Vibrate"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_vibration"
+        android:tint="#F5FFFFFF" />
+
+    <ImageView
+        android:id="@+id/btn_silent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="2dp"
+        android:contentDescription="Silent"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_volume_off"
+        android:tint="#F5FFFFFF" />
+</LinearLayout>

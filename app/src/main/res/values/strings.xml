@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Silent Widget</string>
+    <string name="widget_label">Silent Widget</string>
+    <string name="widget_description">Three-toggle ringer widget: Ring, Vibrate, Silent.</string>
+</resources>
